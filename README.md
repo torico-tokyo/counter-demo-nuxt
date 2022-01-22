@@ -3,6 +3,8 @@
 ## 概要
 Typed Vuex を使ったカウンターのデモアプリ。教則用。
 
+!(static/counter.gif)
+
 ## Build Setup
 
 ```bash
