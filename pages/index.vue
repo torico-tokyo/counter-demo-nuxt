@@ -33,26 +33,27 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { counterStore } from '~/store'
 
 export default Vue.extend({
   name: 'IndexPage',
   computed: {
     count() {
-      return this.$accessor.counter.count
+      return counterStore.count
     },
     countList() {
-      return this.$accessor.counter.countList
+      return counterStore.countList
     },
     average() {
-      return this.$accessor.counter.average
+      return counterStore.average
     }
   },
   methods: {
     countUp() {
-      this.$accessor.counter.countUp()
+      counterStore.countUp()
     },
     append() {
-      this.$accessor.counter.addToCountList()
+      counterStore.addToCountList()
     }
   }
 })

@@ -1,19 +1,19 @@
-import {getAccessorType} from 'typed-vuex'
-import * as counter from '@/store/counter'
+import {Store} from 'vuex'
+import {getModule} from 'vuex-module-decorators'
+import CounterModule from '~/store/counter'
 
-export const state = () => ({})
-export const getters = {}
-export const mutations = {}
-export const actions = {}
+/* eslint-disable import/no-mutable-exports */
+let counterStore: CounterModule
 
-// This compiles to nothing and only serves to return the correct type of the accessor
-export const accessorType: any = getAccessorType({
-  state,
-  getters,
-  mutations,
-  actions,
-  modules: {
-    // The key (submodule) needs to match the Nuxt namespace (e.g. ~/store/submodule.ts)
-    counter
-  }
-})
+/* eslint-able import/no-mutable-exports */
+
+function initialiseStores(store: Store<any>): void {
+  counterStore = getModule(CounterModule, store)
+}
+
+const initializer = (store: Store<any>) => initialiseStores(store)
+export const plugins = [initializer]
+export {
+  initialiseStores,
+  counterStore,
+}
