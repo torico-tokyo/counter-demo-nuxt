@@ -1,5 +1,4 @@
 import {getterTree, mutationTree, actionTree} from 'typed-vuex'
-import axios from 'axios'
 
 export const state = () => ({
   // カウンター
