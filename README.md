@@ -1,5 +1,7 @@
 # counter-demo-nuxt
 
+![](static/counter.gif)
+
 ## 概要
 typed-vuex を使ったカウンターのデモアプリ。教則用。
 
