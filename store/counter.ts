@@ -22,7 +22,7 @@ export default class extends VuexModule {
 
   // カウンターを増加
   @Mutation
-  countUp(value: number) {
+  countUp() {
     this.count += 1
   }
 
