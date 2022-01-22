@@ -26,8 +26,6 @@ riverpod + hooks_riverpod での状態管理は、 vuex の状態管理と 1:1 �
 - [Vue vuex-module-decorators](https://github.com/torico-tokyo/counter-demo-nuxt/blob/vuex-module-decorators/pages/index.vue)
 - [Flutter hooks_riverpod](https://github.com/torico-tokyo/counter-demo-flutter/blob/master/lib/main.dart)
 
-![](static/counter.gif)
-
 ## Build Setup
 
 ```bash
